@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" type="text/css" href="../styles/index.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="../styles/posts.css" media="screen"/>
+    <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="postbody">
+<!-- TODO: Include all your code for the header and home page here -->
+
+<script src="../scripts/index.js"></script>
+<script src="../scripts/posts.js"></script>
+<nav >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="logoText">Scribbler</span>
+            <p class="subText">Explore, Imagine, Create</p>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><button class="buttons" id="sign_up" onclick="showSignUp()">Sign Up</button></li>
+            <li><button class="buttons" id="sign_in" onclick="showSignIn()">Sign In</button></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- The Modal -->
+<div id="signUp" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+        <form action="/action_page.php" >
+            <div >
+                <h1>Get Started</h1>
+
+                <hr>
+                <p> <label for="name"><b>Name</b></label>
+                    <input type="text" placeholder="Enter your email" name="name" required></p>
+
+                <p> <label for="email"><b>username</b></label>
+                    <input type="text" placeholder="Enter your username" name="username" required></p>
+
+                <p><label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter your Password" name="psw" required></p>
+
+                <p><label for="psw-repeat"><b>Confirm Password</b></label>
+                    <input type="password" placeholder="Re-enter your Password" name="psw-repeat" required></p>
+
+                <div class="clearfix">
+                    <button type="submit" class="greenbutton">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+<!-- The Modal -->
+<div id="signIn" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+
+        <span class="close_signin">&times;</span>
+        <form action="/action_page.php" >
+            <div >
+                <h1>Welcome Back!</h1>
+
+                <hr>
+                <p> <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter your email" name="uname" required></p>
+
+                <p><label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter your Password" name="psw" required></p>
+
+
+                <div class="clearfix">
+                    <button type="submit" class="greenbutton">Sign In</button>
+                </div>
+                <p  class="signinFooter" align="center">
+                    <b>Not a member?</b>
+                    <a href="#" onclick="javascript:changeToSignUp()">Sign Up</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+<div id="head"  class="head">
+<h2 style="text-align: center; font-weight: bold">Everything you should know about 'module' & 'require' in Node.js</h2>
+</div>
+<div  class="flex-main">
+        <div class="flex-item-left">
+        <p class="writer">Srishti Gupta</p>
+        </div>
+    <div class="flex-item-right" id="editbutton">
+
+        <button class="pink" onclick="javascript:editContent()">Edit <i class="fa fa-pencil-square-o"  ></i>
+        </button>
+    </div>
+
+        <div class="flex-item-right" id="savebutton">
+
+            <button class="pink" onclick="javascript:saveContent()">Save <i class="fa fa-floppy-o" aria-hidden="true"></i>
+            </button>
+        </div>
+
+    </div>
+
+</div>
+    <div id="para" class="paraText" >
+        <p>
+        Node.js is an open-source and cross-platform JavaScript runtime environment. It is a popular tool for almost any kind of project!
+        </p>
+        <p>
+        Node.js runs the V8 JavaScript engine, the core of Google Chrome, outside of the browser. This allows Node.js to be very performant.
+        </p>
+        <p>
+        A Node.js app is run in a single process, without creating a new thread for every request. Node.js provides a set of asynchronous I/O primitives in its standard library that prevent JavaScript code from blocking and generally, libraries in Node.js are written using non-blocking paradigms, making blocking behavior the exception rather than the norm.
+        </p>
+        <p>
+        When Node.js performs an I/O operation, like reading from the network, accessing a database or the filesystem, instead of blocking the thread and wasting CPU cycles waiting, Node.js will resume the operations when the response comes back.
+        </p>
+        <p>
+        This allows Node.js to handle thousands of concurrent connections with a single server without introducing the burden of managing thread concurrency, which could be a significant source of bugs.
+        </p>
+   </div>
+
+
+<div class="likeFun" id="likeDiv">
+
+    <button  class="pink mybtn"  onclick="javascript:likeCount()">
+        Like <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+
+    </button>
+
+    <p >Be first one to like this!</p>
+</div>
+
+<div class="commentDiv">
+    <textarea placeholder="Leave a comment..." class="postsTextarea" rows="2" cols="40" id="cmts"></textarea>
+    <button  class="pink mybtn" onclick="javascript:addComment()">Comment</button>
+    <p style="font-weight: bold">All Comments </p>
+</div>
+<div class="showCommentDiv" id="comments">
+
+</div>
+
+
+</body>
+</html>
