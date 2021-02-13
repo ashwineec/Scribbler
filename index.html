@@ -3,11 +3,140 @@
 
 <head>
     <!-- TODO: Include Font Awesome file here -->
+    <link rel="stylesheet" type="text/css" href="./styles/index.css" media="screen"/>
     <!-- TODO: Include Google Fonts file here -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
-</body>
 
+    <script src="./scripts/index.js"></script>
+
+<nav >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <span class="logoText">Scribbler</span>
+            <p class="subText">Explore, Imagine, Create</p>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><button class="buttons" id="sign_up" onclick="showSignUp()">Sign Up</button></li>
+            <li><button class="buttons" id="sign_in" onclick="showSignIn()">Sign In</button></li>
+        </ul>
+    </div>
+</nav>
+
+
+    <!-- The Modal -->
+    <div id="signUp" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <span class="close">&times;</span>
+            <form action="/action_page.php" >
+                <div >
+                    <h1>Get Started</h1>
+
+                    <hr>
+                   <p> <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Enter your email" name="name" required></p>
+
+                   <p> <label for="email"><b>username</b></label>
+                       <input type="text" placeholder="Enter your username" name="username" required></p>
+
+                    <p><label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter your Password" name="psw" required></p>
+
+                   <p><label for="psw-repeat"><b>Confirm Password</b></label>
+                       <input type="password" placeholder="Re-enter your Password" name="psw-repeat" required></p>
+
+                    <div class="clearfix">
+                        <button type="submit" class="greenbutton">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+    <!-- The Modal -->
+    <div id="signIn" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <span class="close_signin">&times;</span>
+            <form action="/action_page.php" >
+                <div >
+                    <h1>Welcome Back!</h1>
+
+                    <hr>
+                    <p> <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter your email" name="uname" required></p>
+
+                    <p><label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter your Password" name="psw" required></p>
+
+
+                    <div class="clearfix">
+                        <button type="submit" class="greenbutton">Sign In</button>
+                    </div>
+                    <p  class="signinFooter" align="center">
+                        <b>Not a member?</b>
+                        <a href="#" onclick="javascript:changeToSignUp()">Sign Up</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="center">
+        <button class="yello_btn" onclick="showAllPosts()">All Posts</button>
+        <button class="yello_btn" id="create_post" onclick="showCreatePost()">Create Posts</button>
+    </div>
+
+    <!-- The Modal -->
+    <div id="createPost" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <span class="close_createpost">&times;</span>
+            <form action="/action_page.php" >
+                <div>
+                    <h1>Pen Your Post</h1>
+
+                    <hr>
+                    <p> <label for="title"><b>Title</b></label>
+                        <input type="text" placeholder="Enter titel of your post" name="title" required></p>
+
+                    <p><label for="content"><b>Contents</b></label>
+
+                        <textarea placeholder="Enter the contents of your post" class="textarea_class" name="content" rows="4" cols="60"></textarea>
+
+                    <div class="clearfix">
+                        <button type="submit" class="greenbutton">Create</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+</body>
 </html>

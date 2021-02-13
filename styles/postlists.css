@@ -1,0 +1,122 @@
+.body {
+    background-color: #ffeedd;
+    padding: 10px;
+}
+
+.logoText {
+    font-family: 'Montez', cursive;
+    font-size: 40px;
+    color:blue;
+}
+
+.subText {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 13px;
+    color:black;
+}
+
+.buttons {
+    background-color: blue;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 15px;
+    color:white;
+    width: 80px;
+    margin-top:10px;
+    margin-right: 8px;
+    border:0;
+    height: 30px;
+}
+
+.boxed {
+    border: 1px;
+    padding: 10px;
+    border-radius: 25px;
+
+    display: inline-block;
+}
+
+.flex-line {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    text-align: center;
+    width:100%;
+}
+
+.singlePost {
+    text-align:center;
+    padding:2px;
+    margin:0 auto;
+    width:50%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    text-align: center;
+    width: 50%;
+  }
+
+.flex-item-left {
+    padding: 10px;
+    background-color: white;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    width: 120px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.flex-item-right {
+    padding: 10px;
+    flex: 50%;
+    background: #f1f1f1;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+
+}
+
+.flex-item1 {
+    padding: 10px;
+
+}
+
+.flex-item2 {
+    padding: 10px;
+
+}
+
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+.left_aligh {
+    text-align: end;
+}
+
+.innerp{
+    text-align: left;
+    color:darkgrey;
+    font-size: 22px;
+}
+
+.trash {
+    color: black;
+    float: right;
+    top: -10px;
+    right: -10px;
+}
+
+.trash:hover,
+.trash:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+p{
+    fonst-size:12px;
+}
