@@ -46,7 +46,7 @@ function likeCount() {
     likeCounter=likeCounter+1;
 
 
-    var updateTxt='<div class="likebtn"><button class="pink" onClick="javascript:likeCount()">'+
+    var updateTxt='<div class="likebtn" id="likeDiv"><button class="pink mybtn" onClick="javascript:likeCount()">'+
            ' Liked <i class="fa fa-thumbs-up" aria-hidden="true"></i> </button> </div><p></p>' +
         likeCounter + " person likes this!</p>";
 
