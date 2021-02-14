@@ -44,11 +44,13 @@ function saveContent(){
 
 function likeCount() {
     likeCounter=likeCounter+1;
-
-
+    var person="person";
+    if(likeCounter>1) {
+        person="people";
+    }
     var updateTxt='<div class="likebtn" id="likeDiv"><button class="pink mybtn" onClick="javascript:likeCount()">'+
            ' Liked <i class="fa fa-thumbs-up" aria-hidden="true"></i> </button> </div><p></p>' +
-        likeCounter + " person likes this!</p>";
+        likeCounter + " " + person + " likes this!</p>";
 
     document.getElementById('likeDiv').innerHTML=updateTxt;
 
